@@ -1,0 +1,32 @@
+Data Storage
+ 1. in files (only text, no audio, no video, no pics)
+ 2. in database (we can store all type of data in a efficient way)
+
+Types of DB:
+    1. SQL (store data in tables)
+    2. NoSQL (stores data in objects)
+MySQL (SQL):
+MongoDB (NoSQL):
+
+why ?
+to store data
+
+backend : 
+    1.application server : data k kam k elwa sb koch krta hai
+    2. database server
+Terminologies:
+1.collections: tables, identies, 
+2.documents: signle student ka data
+----------------------------------------
+CODE                   DATABASE 
+----------------------------------------
+Mongose.connect -->    DB create
+Model Create    -->    collection Create
+CREATE user     -->    Document create
+
+3.schemas: 
+4.keys:
+5.Models:
+
+
+Mongoose: nodejs server or MongoDB server k darmyan communication k liye use hota hai
