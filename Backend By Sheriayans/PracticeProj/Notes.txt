@@ -1,0 +1,37 @@
+initilize a project
+
+ npm init -y  OR
+ npm init
+
+install express
+npm i express
+
+
+setting up EJS for EJS packages
+install ejs from npm
+npm i ejs
+
+setup ejs as a view engines
+app.set('view engine', 'ejs');
+
+
+setting up the parsers or formatters
+index.ejs
+app.get('/', (req, res)=>{
+    res.render("index");
+})
+
+
+setting up public static files
+public folder in root and put in all folders(js, syles, images) 
+
+
+dynamic routing 
+hm kai bar koch routes dekhty hain jin mai sirf ik hi hissa change hota hai
+/authur/harh
+/authur/asad
+/authur/dua
+/authur/lili
+
+jis url ko dynamic banana hai os ka dynamic part realise kro or os part k agy route ko dynamic bana do
+how to get data coming from frontend at backend routes

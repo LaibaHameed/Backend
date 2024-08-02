@@ -1,0 +1,16 @@
+{
+  "name": "backend-by-sheriayans",
+  "version": "1.0.0",
+  "description": "we will learn basics of backend",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laiba Hameed",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "one-liner-joke": "^1.2.2"
+  }
+}

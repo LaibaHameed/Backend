@@ -1,0 +1,84 @@
+Core Modules
+1. fs (File System): Read/write files and directories.
+2. http: Create HTTP servers and clients.
+3. path: Manipulate file paths.
+4. events: Implement custom event handling.
+
+Datatypes in Node.js
+Node.js contains various types of data types similar to JavaScript.
+1. Boolean
+2. Undefined
+3. Null
+4. String
+5. Number
+
+NPM understanding 
+npm mai alg alg packages dalay rehty hain we can download them and use them.
+node js jo core mai install ata hai, its called Module.
+npm se jo download krty hain, its called package.
+
+npm  install package-name
+npm  install package-name@version
+npm  uninstall package-name
+
+dependencies: package and package dependencies
+dev-dependencies: jo sirf devlopment k wqt kam aty hain, jb app ban jye ga or upload(deploy) ho jye ga toh hmien in ki koi zaroorat nahi pare gi.
+
+
+Express js introduction
+framework: which tells us, key kam krna hai. flow kya ho ga, require kare gy, access karin gy, route banye gy etc.
+library: gives us the tools , and using these tools we can build whatever we want to.
+its a framework, it manages everything from recieving the reqs and giving the response.
+
+app.get = create server
+agr hm koi changes krty hain toh jb tk hm dobara server ko start nahi krty tb tk content update nahi ho ga, jesy hi hm npm i nodemon 
+cmd execute karin gy phir node ki jagha nodemon likhy gy toh(jb refresh kae gy) wo live server ki tahra kam kare ga
+
+middleWare:
+Middleware acts as a bridge or intermediary layer between the application's core logic and the server or database. It enables tasks such as request processing, authentication, authorization, logging, error handling, and data transformation.
+ jb b ap server ko req send krty ho toh wo req route tk ponchny se phly ap jo koch perform krna cha ry ho osy middleWare kaha jata ha, most probabaly
+req for about page ---> server ----> middleWare ----> route (/about)
+2 ways to implement middleWares
+app.use();
+koch b req ko process krny se phly ye chaly ga.
+
+Error handling:
+express js k pas ik special route hai errors ko handle krny k liye
+
+
+express ik framework hai or iska ik flow hai, phly middleWares phir , routes (/profile) etc, phir errors handling
+
+Form Handling and working with the forms
+handle backend process of forms and making sure the data coming from any frontend library, framework templating engines
+
+npm i cookie-parser
+session cookie: 
+blob : sirf smjhny k liye term use ki hai wrna blob term binary data k lye use ki jati hai
+when we want to follow a account on tiktok, we make a req to server, server don't know us, so server asked for log-in(to recognize us) we log in and follow the account, then the next moment we disconnect with server, we want to like the post (so we make req), but again server don't know us, server wants information about us(through login),
+
+hm koch b data fronted (browser) pr rkh skty hain and jb b ap backend py koi req kro gy toh wo frontend py saved data backend py chala jye ga, or hmain bar bar login nahi krna pare ga.
+
+jb ap  login krty ho toh backend(server) apko ik data(info, String) bejhta hai sath k agli dafa jb tm mere pas req ly k ao toh sath ye data ly ana mai tmhy pehchan lon ga or tmhy bar bar login ki zaroorat nahi pare gi. ye data hm browser(frontend) mai save krwa lety hain.
+
+jo data save krty hain osko cookie kehty hain, or cookie k bases py frontend or backend k darmayan jo connection/rabta hai osy session khety hain . login krny se log out krny tk..(its called session)
+
+jb ap app py form fill krty ho toh os mai for exp: email or password dety ho toh wo backendpy aesy hi plain words mai nahi jata, in the form of blob (unreadable stream/ crypto) mai jata hai.
+stream means jo koch info apki or ap k browser, ip address, location etc ki chahiye on sb ko mix kr k unreadable form mai kr dena
+
+tmne bejha tha plain text, pr server ko mila blob, which is not directly readable, ab is cheez ko handle krna pare ga, k hm os blob ko wapis readable form mai kr dain.
+ye 2 lines yehi kam kr ri hain 
+
+app.use(express.json());   // json base data ko readable krti hai server py / mtlb jb json format mai data frontend se send karin gy toh ye decode kare ga.
+
+app.use(express.urlencoded({extended: true}));
+
+
+
+*** self learing
+https , server , databases , collections , documents, http1, http2 , http3 , mac address, ip address,
+
+
+when we download a package its becomes dependency. why?
+dependencies?
+
+
