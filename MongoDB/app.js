@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const userModel = require('./usermodel')
 
+
 app.get('/', (req, res) => {
     res.send('hello??');
 });
@@ -30,5 +31,6 @@ app.get('/delete', async (req, res) => {
     const deletedUser = await userModel.findOneAndDelete({username : "laiba012"});
     res.send("this user " + deletedUser + " has been deleted");
 });
+
 
 app.listen(3000);
