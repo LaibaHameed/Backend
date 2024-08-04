@@ -9,14 +9,35 @@ MySQL (SQL):
 MongoDB (NoSQL):
 
 why ?
-to store data
+ans: to store data
 
 backend : 
     1.application server : data k kam k elwa sb koch krta hai
     2. database server
 Terminologies:
-1.collections: tables, identies, 
-2.documents: signle student ka data
+1.collections: (grouping of documents) / table in relational databases 
+2.documents: single record in a MongoDB collection / a row in a relational database, Documents are stored in BSON (Binary JSON) format and typically resemble JSON objects. They consist of key-value pairs.
+3.schemas: a schema defines the structure of documents within a collection. While MongoDB itself is schema-less, schemas can be enforced using libraries like Mongoose. Schemas define what fields should be in a document, their data types, default values, validation rules, etc.
+
+        const mongoose = require('mongoose');
+        const Schema = mongoose.Schema;
+
+        const userSchema = new Schema({
+            name: { type: String, required: true },
+            email: { type: String, required: true, unique: true },
+            age: { type: Number, min: 0 }
+        });
+
+        const User = mongoose.model('User', userSchema);
+
+4.keys: keys are the field names in a MongoDB document, Example: In the document { "name": "Alice", "email": "alice@example.com" }, "name" and "email" are keys.
+Primary Key: The _id field is the default primary key for all MongoDB documents. It uniquely identifies each document in a collection.
+ 
+5.Models: are abstractions that allow for easier interaction with collections and documents. Models are typically created using an ODM like Mongoose and are used to perform crud operations (create, read, update, and delete documents).
+    Example:
+        User.create({ name: 'Alice', email: 'alice@example.com', age: 30 })
+
+
 ----------------------------------------
 CODE                   DATABASE 
 ----------------------------------------
@@ -24,9 +45,6 @@ Mongose.connect -->    DB create
 Model Create    -->    collection Create
 CREATE user     -->    Document create
 
-3.schemas: 
-4.keys:
-5.Models:
 
 
 Mongoose: nodejs server or MongoDB server k darmyan communication k liye use hota hai

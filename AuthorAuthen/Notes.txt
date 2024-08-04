@@ -1,0 +1,9 @@
+app.js is a demo file: remainin files are for app
+
+create a user account:
+    mongoose setup
+    schema setup
+    model setup
+    user create -> password ko hash krna 
+    jwt create krna or osko cookie mai store karana
+    user login kare ga toh token recieve ho ga, osko decrypt kr k user ko authenticate karin gy etc;

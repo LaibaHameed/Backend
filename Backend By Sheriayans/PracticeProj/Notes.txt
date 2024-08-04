@@ -34,4 +34,9 @@ hm kai bar koch routes dekhty hain jin mai sirf ik hi hissa change hota hai
 /authur/lili
 
 jis url ko dynamic banana hai os ka dynamic part realise kro or os part k agy route ko dynamic bana do
-how to get data coming from frontend at backend routes
+how to get data coming from frontend at backend routes?
+
+app.get('/edit/:userid', async (req,res)=>{
+    let user = await userModel.findOne({_id : req.params.userid});
+    res.render('edit', {user});
+})

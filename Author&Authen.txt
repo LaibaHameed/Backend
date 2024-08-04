@@ -1,0 +1,28 @@
+user ko login krny se phly database mai check krna k ye banda hai b k nahi? yani os ne phly sign up kia howa k nahi/ profile hai k nahi
+is ko khety hain authentication/validation
+
+ab user ik product ki details change krna cha ra hai ab hm check karin gy k wo is cheeez k liye permission hai k nahi isko khety hain authorization, k banda authorized hai k nahi
+authorize to perform some task which are only allowed to a admin.
+kis cheez ko krny k liye ap k pass permit hai or kis chez k liye nahi , isko khety hain authorization
+
+jb ap web oy koi task perform krny chahty ho toh server ap se authentication mangta hai, jb ap ki validation ho jati hai or wo task perform ho jata hai, os k foran bad ap phir koi task perform krty ho toh server phir validation mangy ga,
+toh is problem ko is tarha solve kia jata hai k jb ap phli dafa authentication krty ho toh serve jawab mai sath ik string bejhta hai, jo ap cookie mia sore kara lety ho, jb ap again kisi task perform krty ki req server py bejhty ho toh wo string sath jati hai, or server apko pehchan jata hai or dobara validation nahi mangta.
+
+
+1. cookie kesy set krna hai
+cookie store the data which is sent by server to the frontend,
+ik dafa cookie chipk gae toh ye har route mai sath jaye gi, authentication header mai hmy ye kam kod krna parhta hai.(chipkanay wala)
+
+2. bcrypt kise use krty hain for password encryption and decryption:
+A "salt" is a random value added to the password before hashing. It ensures that even if two users have the same password, their hashed values will be different due to the unique salt used for each password.The primary purpose of a salt is to protect against rainbow table attacks, where precomputed hash values are used to crack passwords.
+"Salt rounds": refer to the number of times the hashing algorithm is applied during the creation of a hash. In the context of bcrypt, increasing the number of salt rounds makes the hashing process slower, which enhances security.
+
+decryption:
+(is mai hm ye check krty hain k hmre password or hash same hai, yahi ye hash isi password se genrate howa hai? agr yes ho ga toh true print ho ga else false)
+jb hm account banaty hain toh user jo password deta hai hm osko encrypt kr k db mai store karaty hai, jb authentication hoti hai toh hash or password(jo user enter krta hai os wqat) ko compare karaya jata hai agr response true toh authentication pass agr false toh password wrong hai
+
+3. jwt(jason web token) kya hai jwt mai data kesy store karin or bahir kesy nikalain
+(jwt ki web py jao or libraries k section mai node js doondho)
+jwt wo encrypted string hai jo server ne client-side py beji thi authentication k wqat , is ko hm decrypt kr k data nikal skty hain, agr dafa,
+yani ye string (jwt) cookie mai save hoti hai, server is ko decrypt kr k authenticationkr leta hai automatic. 
+ab jwt mai kya bejhna hota hai, wo hm decide krty hain. hmesha unique data hi bejhna hota hai, toh hm email usually store krty hain kiu k wo hr ik ki unique hoti hai

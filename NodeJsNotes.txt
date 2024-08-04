@@ -30,6 +30,8 @@ framework: which tells us, key kam krna hai. flow kya ho ga, require kare gy, ac
 library: gives us the tools , and using these tools we can build whatever we want to.
 its a framework, it manages everything from recieving the reqs and giving the response.
 
+get = jb hm server py koi change nahi kr ry, sirf wah ase data read kr ry
+post = jb hm server mai koi data bej ry ya koi change kr ry
 app.get = create server
 agr hm koi changes krty hain toh jb tk hm dobara server ko start nahi krty tb tk content update nahi ho ga, jesy hi hm npm i nodemon 
 cmd execute karin gy phir node ki jagha nodemon likhy gy toh(jb refresh kae gy) wo live server ki tahra kam kare ga
@@ -62,7 +64,7 @@ jb ap  login krty ho toh backend(server) apko ik data(info, String) bejhta hai s
 
 jo data save krty hain osko cookie kehty hain, or cookie k bases py frontend or backend k darmayan jo connection/rabta hai osy session khety hain . login krny se log out krny tk..(its called session)
 
-jb ap app py form fill krty ho toh os mai for exp: email or password dety ho toh wo backendpy aesy hi plain words mai nahi jata, in the form of blob (unreadable stream/ crypto) mai jata hai.
+jb ap app py form fill krty ho toh os mai for exp: email or password dety ho toh wo backend py aesy hi plain words mai nahi jata, in the form of blob (unreadable stream/ crypto) mai jata hai.
 stream means jo koch info apki or ap k browser, ip address, location etc ki chahiye on sb ko mix kr k unreadable form mai kr dena
 
 tmne bejha tha plain text, pr server ko mila blob, which is not directly readable, ab is cheez ko handle krna pare ga, k hm os blob ko wapis readable form mai kr dain.

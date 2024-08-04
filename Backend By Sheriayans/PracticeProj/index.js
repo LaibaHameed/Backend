@@ -12,11 +12,9 @@ app.get('/', (req, res)=>{
     res.render("index");
 })
 app.get('/profile/:username', (req, res)=>{
-    
     res.send(`Welcome, ${req.params.username}`);
 })
 app.get('/profile/:username/:lastname', (req, res)=>{
-    
     res.send(req.params);
 })
 
