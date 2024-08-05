@@ -1,0 +1,7 @@
+hm ne user or post schema banaya hai,
+yani user ka alg table ho ga
+or post ka alg table,
+
+user ki info(object) mai jo posts:[] array hai os mai hm, os user ki posts ki id's dalain gy jo os ne ki hon gi(foregin key);
+or post ki info(object) mai user:string mai hm user ki id mention kare gy.
+

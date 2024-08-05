@@ -14,8 +14,11 @@ cookie store the data which is sent by server to the frontend,
 ik dafa cookie chipk gae toh ye har route mai sath jaye gi, authentication header mai hmy ye kam kod krna parhta hai.(chipkanay wala)
 
 2. bcrypt kise use krty hain for password encryption and decryption:
-A "salt" is a random value added to the password before hashing. It ensures that even if two users have the same password, their hashed values will be different due to the unique salt used for each password.The primary purpose of a salt is to protect against rainbow table attacks, where precomputed hash values are used to crack passwords.
-"Salt rounds": refer to the number of times the hashing algorithm is applied during the creation of a hash. In the context of bcrypt, increasing the number of salt rounds makes the hashing process slower, which enhances security.
+A "salt" is a random value added to the password before hashing.
+It ensures that even if two users have the same password, their hashed values will be different due to the unique salt used for each password.
+The primary purpose of a salt is to protect against rainbow table attacks, where precomputed hash values are used to crack passwords.
+"Salt rounds": refer to the number of times the hashing algorithm is applied during the creation of a hash. 
+In the context of bcrypt, increasing the number of salt rounds makes the hashing process slower, which enhances security.
 
 decryption:
 (is mai hm ye check krty hain k hmre password or hash same hai, yahi ye hash isi password se genrate howa hai? agr yes ho ga toh true print ho ga else false)
@@ -23,6 +26,16 @@ jb hm account banaty hain toh user jo password deta hai hm osko encrypt kr k db 
 
 3. jwt(jason web token) kya hai jwt mai data kesy store karin or bahir kesy nikalain
 (jwt ki web py jao or libraries k section mai node js doondho)
-jwt wo encrypted string hai jo server ne client-side py beji thi authentication k wqat , is ko hm decrypt kr k data nikal skty hain, agr dafa,
+jwt wo encrypted string hai jo server ne client-side py beji thi authentication k wqat , is ko hm decrypt kr k data nikal skty hain,
 yani ye string (jwt) cookie mai save hoti hai, server is ko decrypt kr k authenticationkr leta hai automatic. 
 ab jwt mai kya bejhna hota hai, wo hm decide krty hain. hmesha unique data hi bejhna hota hai, toh hm email usually store krty hain kiu k wo hr ik ki unique hoti hai
+
+full process:
+user ki profile banaye gy
+db mai hm user ki info / email rkhain gy or password encrypted form mai rkhain gy(hash).
+os k bad user login kare ga toh email or password enter kare ga.
+hm phly email se db mai user ko find kare gy,
+phir user k diye howy password ko hm apny hash se compare karaye gy. agr true how toh, yani password theek hai.
+hm cookie mai token(jwt) save kare gy, jwt mai hm jo b send krna cahye kr skty, usually email send krty hain,
+ab user ko authenticate kr dain gy, you are logged in.
+

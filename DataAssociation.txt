@@ -1,0 +1,2 @@
+referencing: ap ik product sell krty ho os product ki sari info ik object mai hai. os product ki ik id hai jo os ko uniquely identify krti hai baqi sab products k darmyan, toh ap user ki collection mai sirf product ki id dety ho jo osko desire product info py ly jati hai jo k ap ki collection mai para howa hai.
+embeding: ap id ki jagha pora object copy kr k rkh dety ho user ki collection mai. (user jaldi read kr pata hai or storage zayada use hoti hai).

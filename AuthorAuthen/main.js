@@ -46,7 +46,8 @@ app.post('/create', (req, res) => {
 // loggin
 app.get("/login", (req, res) => {
     res.render('login');
-})
+});
+
 app.post("/login", async (req, res) => {
     let user = await userModel.findOne({ email: req.body.email });
     console.log(user);
