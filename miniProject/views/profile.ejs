@@ -8,9 +8,11 @@
 </head>
 <body>
     <div class="main w-full min-h-screen bg-zinc-900">
-        <div class="flex w-full justify-end px-4">
+        <div class="flex gap-3 w-full justify-end px-4">
+            <a href="/" class="bg-zinc-700 hover:bg-zinc-800 text-sm py-2 px-10 text-white mt-2 rounded-md inline-block">Home</a>
             <a href="/logout" class="bg-red-500 hover:bg-red-700 text-sm py-2 px-10 text-white mt-2 rounded-md inline-block self-end">LogOut</a>
         </div>
+        <!-- post creation section -->
         <div class="form px-10 text-zinc-200 w-full">
             <h1 class="text-3xl tracking-tight font-bold"> Hey , <%= user.name %> </h1>
             <h3 class="text-md mb-1 mt-4">you can create a new post!</h3>
@@ -18,6 +20,7 @@
                 <textarea class="w-full px-5 py-4 my-1 block bg-zinc-800 rounded-md outline-none resize-none min-h-40" required name="content" placeholder="Hello, <%= user.name %>, what's on your mind?"></textarea>
                 <button type="submit" class="bg-green-600 hover:bg-green-700 py-3 px-10 text-white mt-2 rounded-md self-end">Post</button>
             </form>
+            <!-- posts section -->
             <h1 class="text-2xl tracking-tight font-bold"> Your Posts </h1>
             <div class="tasks py-10 flex gap-3 flex-wrap">
                 <% if(user.posts.length > 0){ %>
@@ -28,13 +31,8 @@
                             <p class="text-zinc-500 text-md tracking-tighter my-2">
                                 <%= post.formattedDate %> at <%= post.formattedTime %>
                             </p>
-                            <div class="w-full flex gap-3 justify-end content-center items-center pr-3 pt-3">
+                            <div class="w-full flex flex-wrap gap-3 justify-end content-center items-center pr-3 pt-3">
                                 <p class="w-full"><%= post.likes.length %> likes</p>
-
-                                <a href="/like/<%= post._id %>" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
-                                    <%= post.likes.indexOf(user._id) === -1 ? "Like" : "Unlike" %>
-                                </a>
-
                                 <a href="/edit/<%= post._id %>" class="bg-yellow-600 hover:bg-yellow-700 text-white py-2 px-4 rounded">Edit</a>
                                 <a href="/delete/<%= post._id %>" class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">Delete</a>
                             </div>
